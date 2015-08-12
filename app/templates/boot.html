@@ -1,1 +1,53 @@
-<button ng-click="toggleBoot()">Boot</button>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <button ng-click="toggleBoot()">Boot</button>
+  </div>
+  <div class="col-md-1"></div>
+
+  <br/>
+  <br/>
+
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <strong>The problem:</strong>
+
+    <ul>
+      A software subsystem of an air-traffic control system is defined to manage a queue of aircraft (AC) in an airport.
+      The aircraft queue is managed by a process which responds to three types of requests:
+
+      <ul>
+        <li>system boot used to start the system.</li>
+        <li>enqueue aircraft used to insert a new AC into the system.</li>
+        <li>dequeue aircraft used to remove an AC from the system.</li>
+      </ul>
+
+      AC’s have the following properties:
+      <ul>
+        <li>AC type: Passenger or Cargo</li>
+        <li>AC size: Small or Large</li>
+      </ul>
+
+      The process which manages the queue of AC’s satisfies the following:
+
+      <ul>
+        <li>There is no limit on the number of AC’s it can manage (could be tens of thousands)</li>
+        <li>Dequeue aircraft requests result in selection of one AC for removal such that:</li>
+        <li>Passenger AC’s have removal precedence over Cargo AC’s</li>
+        <li>Large AC’s of a given type have removal precedence over Small AC’s of the same type.</li>
+        <li>Earlier enqueued AC’s of a given type and size have precedence over later enqueued AC’s of the same type and size.</li>
+      </ul>
+    </ul>
+
+
+    <strong>The solution:</strong>
+    <ul>
+      <a href="https://github.com/cdcooksey/airplane-algorithm">github.com/cdcooksey/airplane-algorithm</a>
+    </ul>
+
+  </div>
+  <div class="col-md-1"></div>
+
+  <br/>
+  <br/>
+</div>
