@@ -6,5 +6,8 @@ angular.module('myApp', [
   'myApp.version',
   'myApp.directives.header',
   'myApp.directives.boot',
-  'myApp.directives.plane-form'
+  'myApp.directives.plane-form',
+  'myApp.factories.Plane',
+  'myApp.factories.Sizes',
+  'myApp.factories.Types'
 ])

@@ -3,6 +3,11 @@ angular.module('myApp.directives.plane-form', [])
     return {
       restrict: 'E',
       replace: true,
-      templateUrl: 'templates/plane-form.html'
+      templateUrl: 'templates/plane-form.html',
+      controller: ['$scope', 'Plane', function ($scope, Plane) {
+
+        $scope.plane = Plane.plane;
+
+      }]
     };
   });
