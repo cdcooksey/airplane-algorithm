@@ -6,14 +6,14 @@ This project uses AngularJS 1.4.x with Jasmine and Protractor.
 
 This question was asked during a technical interview:
 
-```A software subsystem of an air-traffic control system is defined to manage a queue of aircraft (AC) in an airport. The aircraft queue is managed by a process which responds to three types of requests:
+```
+A software subsystem of an air-traffic control system is defined to manage a queue of aircraft (AC) in an airport. The aircraft queue is managed by a process which responds to three types of requests:
    
    - system boot used to start the system.
    
    - enqueue aircraft used to insert a new AC into the system.
    
    - dequeue aircraft used to remove an AC from the system.
-   
    
    AC’s have the following properties:
    
@@ -31,7 +31,8 @@ This question was asked during a technical interview:
    
    Large AC’s of a given type have removal precedence over Small AC’s of the same type.
    
-   Earlier enqueued AC’s of a given type and size have precedence over later enqueued AC’s of the same type and size.```
+   Earlier enqueued AC’s of a given type and size have precedence over later enqueued AC’s of the same type and size.
+```
 
 ### Prerequisites
 
