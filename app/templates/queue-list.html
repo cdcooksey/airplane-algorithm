@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <div ng-repeat="item in queue">
+      <ul>
+        <li>
+          {{ item.size.name }} | {{ item.type.name }} | {{ item.datetime| date:"MM/dd/yyyy 'at' hh:mm:ss" }}
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="col-md-1"></div>
+
+</div>
