@@ -1,19 +1,23 @@
-<div>
-  <form novalidate class="simple-form">
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <form novalidate class="simple-form">
 
-    Size:
-    <select ng-model="Plane.size"
-            ng-options="size as size.name for size in plane.sizes">
-    </select>
+      Size:
+      <select ng-model="Plane.size"
+              ng-options="size as size.name for size in plane.sizes">
+      </select>
 
-    Type:
-    <select ng-model="Plane.type"
-            ng-options="type as type.name for type in plane.types">
-    </select>
+      Type:
+      <select ng-model="Plane.type"
+              ng-options="type as type.name for type in plane.types">
+      </select>
 
-  </form>
+    </form>
 
-  <button ng-click="dequeue()">Dequeue</button>
+    <button ng-click="dequeue()">Dequeue</button>
 
-  <button ng-click="enqueue(Plane)">Enqueue</button>
+    <button ng-click="enqueue(Plane)">Enqueue</button>
+  </div>
+  <div class="col-md-1"></div>
 </div>
