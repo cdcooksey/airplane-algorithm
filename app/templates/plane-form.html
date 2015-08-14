@@ -5,12 +5,12 @@
     <form novalidate class="simple-form">
 
       Size:
-      <select ng-model="Plane.size"
+      <select ng-model="PlaneTypes.size"
               ng-options="size as size.name for size in plane.sizes">
       </select>
 
       Type:
-      <select ng-model="Plane.type"
+      <select ng-model="PlaneTypes.type"
               ng-options="type as type.name for type in plane.types">
       </select>
 
@@ -18,7 +18,8 @@
 
     <button ng-click="dequeue()">Dequeue</button>
 
-    <button ng-click="enqueue(Plane)">Enqueue</button>
+    <button ng-click="enqueue(PlaneTypes)">Enqueue</button>
   </div>
   <div class="col-md-1"></div>
+
 </div>

@@ -7,7 +7,14 @@ angular.module('myApp', [
   'myApp.directives.header',
   'myApp.directives.boot',
   'myApp.directives.plane-form',
-  'myApp.factories.Plane',
+  'myApp.directives.queue-list',
+  'myApp.directives.queue-count',
+  'myApp.factories.PlaneTypes',
   'myApp.factories.Sizes',
-  'myApp.factories.Types'
+  'myApp.factories.Types',
+  'myApp.factories.LargePassengerPlane',
+  'myApp.factories.LargeCargoPlane',
+  'myApp.factories.SmallPassengerPlane',
+  'myApp.factories.SmallCargoPlane',
+  'myApp.factories.PlaneQueue'
 ])
