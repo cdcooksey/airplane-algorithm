@@ -13,31 +13,31 @@ angular.module('myApp.factories.PlaneQueue', [])
         var smallPassengers = SmallPassengerPlane.queue;
         var smallCargos = SmallCargoPlane.queue;
 
-        // Flatten into single array.
+        // Flatten into single array. Load in order of priority.
         planeList = planeList.concat.apply(planeList, largePassengers);
-        planeList = planeList.concat.apply(planeList, largeCargos);
         planeList = planeList.concat.apply(planeList, smallPassengers);
+        planeList = planeList.concat.apply(planeList, largeCargos);
         planeList = planeList.concat.apply(planeList, smallCargos);
 
         return planeList;
       },
 
       add: function(plane) {
-        // Determine what type of plane we have.
+        // Determine what type of plane we have. Load in order of priority.
 
         // Large Passenger Plane
         if(plane.size.id === LargePassengerPlane.size.id && plane.type.id === LargePassengerPlane.type.id) {
           return LargePassengerPlane.add(plane);
         }
 
-        // Large Cargo Plane
-        if(plane.size.id === LargeCargoPlane.size.id && plane.type.id === LargeCargoPlane.type.id) {
-          return LargeCargoPlane.add(plane);
-        }
-
         // Small Passenger Plane
         if(plane.size.id === SmallPassengerPlane.size.id && plane.type.id === SmallPassengerPlane.type.id) {
           return SmallPassengerPlane.add(plane);
+        }
+
+        // Large Cargo Plane
+        if(plane.size.id === LargeCargoPlane.size.id && plane.type.id === LargeCargoPlane.type.id) {
+          return LargeCargoPlane.add(plane);
         }
 
         // Small Cargo Plane
