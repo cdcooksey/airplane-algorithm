@@ -1,13 +1,23 @@
 <div class="row">
   <div class="col-md-1"></div>
+
   <div class="col-md-10">
-    <div ng-repeat="item in queue">
-      <ul>
-        <li>
-          {{ item.size.name }} | {{ item.type.name }} | {{ item.datetime| date:"MM/dd/yyyy 'at' hh:mm:ss" }}
-        </li>
-      </ul>
-    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Size</th>
+          <th>Type</th>
+          <th>Timestamp</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in queue">
+          <td>{{ item.size.name }}</td>
+          <td>{{ item.type.name }}</td>
+          <td>{{ item.datetime| date:"dd MMMM yyyy  '@' hh:mm:ss" }}</td>
+        </tr>
+      </tbody>
+    </table>
 
   </div>
   <div class="col-md-1"></div>
