@@ -29,6 +29,7 @@ angular.module('myApp.factories.SmallPassengerPlane', [])
       },
 
       remove: function() {
+        return queue.shift();
       }
 
     };
