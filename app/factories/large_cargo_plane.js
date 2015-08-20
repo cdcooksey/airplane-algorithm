@@ -29,6 +29,7 @@ angular.module('myApp.factories.LargeCargoPlane', [])
       },
 
       remove: function() {
+        return queue.shift();
       }
 
     };

@@ -4,6 +4,9 @@ angular.module('myApp.directives.queue-list', [])
       restrict: 'E',
       replace: true,
       templateUrl: 'templates/queue-list.html',
+      /**
+       * PlaneQueue factories/plane_queue.js
+       */
       controller: ['$scope', 'PlaneQueue', function ($scope, PlaneQueue) {
 
         // Aircraft queue starts out empty.
@@ -22,7 +25,7 @@ angular.module('myApp.directives.queue-list', [])
 
         // Removes highest priority aircraft from queue.
         $scope.dequeue = function () {
-          console.log('TODO: removing plane');
+          PlaneQueue.remove();
           $scope.updateQueueList();
         };
 

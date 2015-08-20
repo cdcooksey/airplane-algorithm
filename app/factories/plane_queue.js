@@ -45,10 +45,33 @@ angular.module('myApp.factories.PlaneQueue', [])
           return SmallCargoPlane.add(plane);
         }
 
+        return false;
       },
 
       remove: function() {
+        // Determine what type of plane we have. Remove in order of priority.
 
+        // Large Passenger Plane
+        if(LargePassengerPlane.queue.length > 0) {
+          return LargePassengerPlane.remove();
+        }
+
+        // Small Passenger Plane
+        if(SmallPassengerPlane.queue.length > 0) {
+          return SmallPassengerPlane.remove();
+        }
+
+        // Large Cargo Plane
+        if(LargeCargoPlane.queue.length > 0) {
+          return LargeCargoPlane.remove();
+        }
+
+        // Small Cargo Plane
+        if(SmallCargoPlane.queue.length > 0) {
+          return SmallCargoPlane.remove();
+        }
+
+        return false;
       }
     };
 
